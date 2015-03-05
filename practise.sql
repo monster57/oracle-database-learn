@@ -26,6 +26,6 @@ create table manager as select e.id , e.name , e.mgr_id from employee e;
 	select gender ,count(*) from employee group by gender;
 	select pan_number , count(*) from employee group by pan_number;
 	select d.dept_name , max(e.salary) from employee e , department d where e.dept_id = d.id group by d.dept_name;
-
+	select e.name , e.salary from employee e group by e.name having salary = max(e.salary);
 
 
